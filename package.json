@@ -1,0 +1,22 @@
+{
+  "name": "stock-managment-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+  "seed": "node seed.js",
+  "type":"commonjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.4",
+    "nodemon": "^3.1.14"
+  }
+}
