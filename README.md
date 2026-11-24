@@ -1,6 +1,6 @@
 # Stock Management System (Backend)
 
-A REST API for a stock management system, built with Node.js, Express and MySQL. It handles user login, and lets managers and users work with daily stock records.
+A REST API for a stock management system, built with Node.js, Express and MongoDB. It handles user login, and lets managers and users work with daily stock records.
 
 ## Features
 
@@ -12,7 +12,7 @@ A REST API for a stock management system, built with Node.js, Express and MySQL.
 
 ## Project Structure
 
-    config/        database connection
+    config/        MongoDB connection
     controller/    auth, manager and user logic
     middleware/    authentication check
     models/        User, DailyRecord, BlockedToken
@@ -22,17 +22,23 @@ A REST API for a stock management system, built with Node.js, Express and MySQL.
 
 ## Setup
 
-1. Install dependencies:
+1. Make sure MongoDB is installed and running (or use a MongoDB Atlas link).
+
+2. Install dependencies:
 
         npm install
 
-2. Create a `.env` file with your database details and secret key (for example host, user, password, database name and JWT secret).
+3. Create a `.env` file:
 
-3. Add starting data (optional):
+        MONGO_URI=mongodb://localhost:27017/stock_db
+        JWT_SECRET=your_secret_key
+        PORT=5000
+
+4. Add starting data (optional):
 
         node seed.js
 
-4. Start the server:
+5. Start the server:
 
         node server.js
 
